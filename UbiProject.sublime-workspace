@@ -1,0 +1,316 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"t",
+				"table\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Sprites/p1_spritesheet.xml",
+			"settings":
+			{
+				"buffer_size": 1150,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 45,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"package\t",
+				"Package Control: Install Package"
+			],
+			[
+				"colors",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"Package ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 204.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jontnog/Dropbox/Work/CODE/ClientServerTest"
+	],
+	"file_history":
+	[
+		"/Users/jontnog/Dropbox/Work/CODE/ClientServerTest/Sprites/p1_spritesheet.txt",
+		"/Users/jontnog/Dropbox/Work/CODE/ClientServerTest/main.rb",
+		"/Users/jontnog/Dropbox/Work/CODE/ClientServerTest/Entities/Character.rb",
+		"/Users/jontnog/Dropbox/Work/CODE/ClientServerTest/Sprites/cat_fighter_sprite.png",
+		"/Users/jontnog/Dropbox/Work/CODE/ClientServerTest/UbiProject.sublime-project",
+		"/Users/jontnog/Downloads/kiyo_rireki.tex",
+		"/Users/jontnog/Documents/Curse/Minecraft/Instances/FTB Presents Direwolf20 1.10/config/reccomplex.cfg",
+		"/Users/jontnog/Downloads/FTBPresentsDirewolf20110Server_1.11.0/FTBInstall.sh",
+		"/Users/jontnog/Downloads/FTBPresentsDirewolf20110Server_1.11.0/settings.sh",
+		"/Users/jontnog/Dropbox/Work/CODE/searchinTheDayAway/routes/index.js",
+		"/Users/jontnog/Dropbox/Work/CODE/searchinTheDayAway/app.js",
+		"/Users/jontnog/Dropbox/Work/CODE/searchinTheDayAway/package.json",
+		"/Users/jontnog/Dropbox/Work/CODE/searchinTheDayAway/app.yaml",
+		"/Users/jontnog/code/OpenGL-tutorial/external/CMakeLists.txt",
+		"/Users/jontnog/code/OpenGL-tutorial/CMakeLists.txt",
+		"/Users/jontnog/code/OpenGL-tutorial/tutorial01_first_window/tutorial01.cpp",
+		"/Users/jontnog/code/OpenGL-tutorial/CmakeLists.txt",
+		"/Users/jontnog/code/OpenGL-tutorial/README",
+		"/Users/jontnog/code/OpenGL-tutorial/tutorial01_first_window/test.cpp",
+		"/Users/jontnog/Dropbox/Work/CODE/AppiaTechTest/AppiaTechTest/PoemTree.cs",
+		"/Users/jontnog/Dropbox/Work/CODE/AppiaTechTest/AppiaTechTest/PoemNode.cs",
+		"/Users/jontnog/code/pointsbank/pointsbank/bower.json",
+		"/Users/jontnog/code/pointsbank/pointsbank/package.json",
+		"/Users/jontnog/Movies/Batsu2015-1080p.ass",
+		"/Users/jontnog/code/pointsbank/pointsbank/app.js",
+		"/Users/jontnog/code/pointsbank/pointsbank/views/home.jade",
+		"/Users/jontnog/code/pointsbank/pointsbank/views/layout.jade",
+		"/Users/jontnog/code/pointsbank/pointsbank/views/derp.jade",
+		"/Users/jontnog/code/pointsbank/pointsbank/routes.coffee",
+		"/Users/jontnog/code/pointsbank/Vagrantfile",
+		"/Users/jontnog/code/pointsbank/pointsbank/config/app.yaml",
+		"/Users/jontnog/Dropbox/Work/CODE/TempHomePage.html",
+		"/Users/jontnog/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/jontnog/Documents/test.html"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Sprites/p1_spritesheet.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1134,
+								1134
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/XML/XML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Ruby/Ruby.sublime-build",
+	"project": "UbiProject.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/test.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 239.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
