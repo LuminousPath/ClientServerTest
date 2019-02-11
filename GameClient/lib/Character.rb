@@ -3,6 +3,7 @@ require 'xmlsimple'
 
 class Character
 	attr_reader :sprite
+	attr_accessor :state
 
 	def initialize(spritesheet, configloc)
 
@@ -12,16 +13,48 @@ class Character
 			spritesheet,
 			time: GlobalConfig.config.frametime,
 			loop: GlobalConfig.config.loop,
+			z: 2,
 			animations: charconfig.animationset
 		)
+		@sprite.play animation: :idle
+		@sprite.x = 0
+		@sprite.y = 0
 	end
+
+	def updateplayerstate(states = {})
+		if states[:colliding] == true
+			Input::INPUTSTATUS[:colliding] = true
+		elsif states[:colliding] == false
+			Input::INPUTSTATUS[:colliding] = false
+		end
+	end
+
+	def runanimate(playerstate)
+		if Input::INPUTSTATUS[:colliding]
+			Input::INPUTSTATUS[:falling] = false
+		elsif Input::INPUTSTATUS[:jumping] == false
+			Input::INPUTSTATUS[:falling] = true
+		end
+		if Input::INPUTSTATUS[:falling]
+			@sprite.y += 3
+		end
+		if Input::INPUTSTATUS[:movingright]
+			@sprite.x += 1
+		elsif Input::INPUTSTATUS[:movingleft]
+			@sprite.x -= 1
+		end
+		if Input::INPUTSTATUS[:jumping]
+			@sprite.y -= 3
+		end
+	end
+
 end
 
 class CharacterConfig
 	attr_reader :animationconfig,  :animationset
 
 	def initialize(configloc)
-		@animationconfig = characterSpriteSheetConfig = XmlSimple.xml_in(open(configloc))
+		@animationconfig = XmlSimple.xml_in(open(configloc))
 
 		@animationset = animationconfig['Animation'].map.with_index do |animation|
 			[

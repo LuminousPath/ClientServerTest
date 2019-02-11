@@ -1,9 +1,14 @@
 class Configuration
-	attr_accessor :frametime, :loop
+	attr_accessor :frametime, :loop, :height, :width, :title, :resizable, :background
 
 	def initialize
 		@frametime = nil
 		@loop = nil
+		@height = nil
+		@width = nil
+		@title = nil
+		@resizable = nil
+		@background = nil
 	end
 end
 

@@ -1,82 +1,85 @@
 require 'ruby2d'
 require './lib/Configuration.rb'
 require './lib/Character.rb'
-
-set title: "ジャンプガイ"
-set resizable: false
-set height: 576
-set width: 1024
+require './lib/Input.rb'
+require './lib/Network.rb'
+require './lib/World.rb'
+require './lib/Map.rb'
 
 GlobalConfig.config.frametime = 100
 GlobalConfig.config.loop = true
+GlobalConfig.config.height = 576
+GlobalConfig.config.width = 1024
+GlobalConfig.config.title = "ジャンプガイ"
+GlobalConfig.config.resizable = false
+GlobalConfig.config.background = 'blue'
 
-Player = Character.new('resources/Sprites/p1_spritesheet.png', 'resources/Sprites/p1_spritesheet.xml')
+set title: GlobalConfig.config.title
+set resizable: GlobalConfig.config.resizable
+set height: GlobalConfig.config.height
+set width: GlobalConfig.config.width
+set background: GlobalConfig.config.background
 
-Player.sprite.y = (get :height) - 97
-Player.sprite.play animation: :idle
+map = Map.new(
+	'resources/Sprites/tiles_spritesheet.png',
+	'resources/Sprites/tiles_spritesheet.xml',
+	'resources/Sprites/items_spritesheet.png',
+	'resources/Sprites/items_spritesheet.xml',
+	'resources/Map.xml'
+	)
+player = Character.new(
+	'resources/Sprites/p1_spritesheet.png',
+	'resources/Sprites/p1_spritesheet.xml'
+	)
+world = World.new(player, map)
 
-inputstatus = { movingleft: false, movingright: false, jumping: false, ducking: false, falling: false}
+update do
+	world.checkplayerstate()
+	player.runanimate(player.state)
+end
 
 on :key_held do |event|
 	case event.key
 		when 'left'
-			Player.sprite.height = 97
-			Player.sprite.width = 72
-			inputstatus[:movingleft] = true
-			Player.sprite.play animation: :walk, loop: true, flip: :horizontal
+			player.sprite.height = 97
+			player.sprite.width = 72
+			Input::INPUTSTATUS[:movingleft] = true
+			player.sprite.play animation: :walk, loop: true, flip: :horizontal
 		when 'right'
-			Player.sprite.height = 97
-			Player.sprite.width = 72
-			inputstatus[:movingright] = true
-			Player.sprite.play animation: :walk, loop: true
+			player.sprite.height = 97
+			player.sprite.width = 72
+			Input::INPUTSTATUS[:movingright] = true
+			player.sprite.play animation: :walk, loop: true
 		when 'up'
-			Player.sprite.height = 94
-			Player.sprite.width = 67
-			unless inputstatus[:falling]
-				inputstatus[:jumping] = true
+			player.sprite.height = 94
+			player.sprite.width = 67
+			unless Input::INPUTSTATUS[:falling]
+				Input::INPUTSTATUS[:jumping] = true
 			end
-			if inputstatus[:movingleft]
-				Player.sprite.play animation: :jump, loop: false, flip: :horizontal
+			if Input::INPUTSTATUS[:movingleft]
+				player.sprite.play animation: :jump, loop: false, flip: :horizontal
 			else
-				Player.sprite.play animation: :jump, loop: false
+				player.sprite.play animation: :jump, loop: false
 			end
 		when 'down'
-			Player.sprite.height = 71
-			Player.sprite.width = 66
-			inputstatus[:ducking] = true
-			Player.sprite.play animation: :duck, loop: false
+			player.sprite.height = 71
+			player.sprite.width = 66
+			Input::INPUTSTATUS[:ducking] = true
+			player.sprite.play animation: :duck, loop: false
 	end
 end
 
-on :key_up do |event|
-	Player.sprite.height = 92
-	Player.sprite.width = 66
-	inputstatus[:movingright] = false
-	inputstatus[:movingleft] = false
-	if inputstatus[:jumping]
-		inputstatus[:jumping] = false
-		inputstatus[:falling] = true
+	on :key_up do |event|
+		player.sprite.height = 92
+		player.sprite.width = 66
+		Input::INPUTSTATUS[:movingright] = false
+		Input::INPUTSTATUS[:movingleft] = false
+		if Input::INPUTSTATUS[:jumping]
+			Input::INPUTSTATUS[:jumping] = false
+			Input::INPUTSTATUS[:falling] = true
+		end
+		Input::INPUTSTATUS[:ducking] = false
+		player.sprite.play animation: :idle
 	end
-	inputstatus[:ducking] = false
-	Player.sprite.play animation: :idle
-end
-
-update do
-	if Player.sprite.y >= (get :height) - 97
-		Player.sprite.y = (get :height) - 97
-		inputstatus[:falling] = false
-	end
-	if inputstatus[:falling]
-		Player.sprite.y += 3
-	end
-	if inputstatus[:movingright]
-		Player.sprite.x += 1
-	elsif inputstatus[:movingleft]
-		Player.sprite.x -= 1
-	end
-	if inputstatus[:jumping]
-		Player.sprite.y -= 3
-	end
-end
 
 show
