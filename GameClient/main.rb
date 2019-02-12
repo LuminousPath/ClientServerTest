@@ -15,7 +15,7 @@ GlobalConfig.config.width = 1024
 GlobalConfig.config.title = "ジャンプガイ"
 GlobalConfig.config.resizable = false
 GlobalConfig.config.background = 'blue'
-GlobalConfig.config.url = 'http://0.0.0.0:3000/scores'
+GlobalConfig.config.url = 'http://ubisoft-example.appspot.com/scores'
 
 #set ruby2d constant values
 set title: GlobalConfig.config.title
