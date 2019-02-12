@@ -34,7 +34,7 @@ class MapConfig
 					height: tileconfig.tileheight,
 					animations: tileconfig.tileset
 				)
-				@tiles.push(Tile.new(sprite, (tile["collide"] == "true")))
+				@tiles.push(Tile.new(sprite, (tile["collide"] == "true"), (tile["gameover"] == "true")))
 				sprite.play animation: tile["name"].to_sym
 				spritex += tileconfig.tilewidth
 			end
@@ -91,10 +91,15 @@ class TileConfig
 end
 
 class Tile
-	attr_accessor :sprite, :collision
+	attr_accessor :sprite, :collision, :gameover, :spriteleft, :spriteright, :spriteup, :spritedown
 
-	def initialize(sprite, collision)
+	def initialize(sprite, collision, gameover)
 		@sprite = sprite
 		@collision = collision
+		@gameover = gameover
+		@spriteleft = @sprite.x
+		@spriteup = @sprite.y
+		@spriteright = @sprite.x + @sprite.clip_width
+		@spritedown = @sprite.y + @sprite.clip_height
 	end
 end

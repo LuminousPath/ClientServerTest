@@ -47,8 +47,8 @@
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
+		<Tile name="signExit" collide="false" gameover="true"/>
 		<Tile name="clear" collide="false" />
-		<Tile name="signExit" collide="false" />
 	</Row>
 	<Row>
 		<Tile name="clear" collide="false" />
@@ -64,7 +64,7 @@
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
-		<Tile name="grassHillLeft" collide="true" />
+		<Tile name="grassMid" collide="true" />
 		<Tile name="grassMid" collide="true" />
 	</Row>
 	<Row>
@@ -79,9 +79,9 @@
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
-		<Tile name="grassHillLeft" collide="true" />
 		<Tile name="grassMid" collide="true" />
-		<Tile name="grassHillLeft2" collide="true" />
+		<Tile name="grassMid" collide="true" />
+		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 	</Row>
 	<Row>
@@ -95,8 +95,8 @@
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
-		<Tile name="grassHillLeft" collide="true" />
-		<Tile name="grassHillLeft2" collide="true" />
+		<Tile name="grassMid" collide="true" />
+		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
@@ -108,11 +108,11 @@
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
-		<Tile name="grassHillLeft" collide="true" />
 		<Tile name="grassMid" collide="true" />
 		<Tile name="grassMid" collide="true" />
 		<Tile name="grassMid" collide="true" />
-		<Tile name="grassHillLeft2" collide="true" />
+		<Tile name="grassMid" collide="true" />
+		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
@@ -123,9 +123,9 @@
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
 		<Tile name="clear" collide="false" />
-		<Tile name="grassHillLeft" collide="true" />
 		<Tile name="grassMid" collide="true" />
-		<Tile name="grassHillLeft2" collide="true" />
+		<Tile name="grassMid" collide="true" />
+		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
@@ -140,7 +140,7 @@
 		<Tile name="grassMid" collide="true" />
 		<Tile name="grassMid" collide="true" />
 		<Tile name="grassMid" collide="true" />
-		<Tile name="grassHillLeft2" collide="true" />
+		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />
 		<Tile name="grassCenter" collide="true" />

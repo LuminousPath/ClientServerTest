@@ -1,5 +1,5 @@
 class Configuration
-	attr_accessor :frametime, :loop, :height, :width, :title, :resizable, :background
+	attr_accessor :frametime, :loop, :height, :width, :title, :resizable, :background, :url
 
 	def initialize
 		@frametime = nil
@@ -9,6 +9,7 @@ class Configuration
 		@title = nil
 		@resizable = nil
 		@background = nil
+		@url = nil
 	end
 end
 
