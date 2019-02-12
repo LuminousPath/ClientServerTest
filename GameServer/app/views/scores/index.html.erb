@@ -1,32 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div id="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Scores</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Completiontime</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% if @scores.size == 0%>
-      <tr>
-        <td colspan="3">No scores found.</td>
-      </tr>
-    <% else %>
-      <% @scores.each do |score| %>
+  <h1>Scores</h1>
+  <div id="tablediv">
+    <table id="datatable">
+      <thead>
         <tr>
-          <td><%= score.name %></td>
-          <td><%= score.completiontime %></td>
-          <td><%= link_to 'Show', score %></td>
-          <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <th id="namecolumn">Name</th>
+          <th id="completiontimecolumn">Completiontime</th>
+          <th colspan="3"></th>
         </tr>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
 
-<br>
+      <tbody>
+        <% if @scores.size == 0%>
+          <tr>
+            <td colspan="3">No scores found.</td>
+          </tr>
+        <% else %>
+          <% @scores.sort { |a, b| b.completiontime <=> a.completiontime }.each do |score| %>
+            <tr>
+              <td class="data"><%= score.name %></td>
+              <td class="data"><%= score.completiontime %></td>
+              <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+</div>
