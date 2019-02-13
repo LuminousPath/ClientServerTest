@@ -27,7 +27,7 @@ Thanks to www.kenney.nl for sprites
 
 ```bundle exec rails s```
 
-3. ｀http://0.0.0.0:3000`にブラウズして
+3. `http://0.0.0.0:3000`にブラウズして
 
 ## GameClient
 
