@@ -2,7 +2,7 @@ Thanks to www.kenney.nl for sprites
 
 # Running
 
-Requires Ruby `2.6.1`, `bundler`, and `MongoDB`
+Requires `ruby 2.6.1`, `bundler`, and `MongoDB`
 
 1. Make sure Ruby is installed and running. You can download ruby from [ruby-lang.org](https://www.ruby-lang.org/en/)
 2. Make sure bundler is installed
@@ -34,6 +34,15 @@ Requires Ruby `2.6.1`, `bundler`, and `MongoDB`
 
 # やり方
 
+`ruby 2.6.1`, `bundler`, `MongoDB`は必要
+
+1. Rubyをインストールしたのを確認して。 [ruby-lang.org](https://www.ruby-lang.org/en/)からダウンロードできます。
+2. bundlerはインストールしたのを確認して
+
+```gem install bundler```
+
+3. MongoDBはインストールしたのを確認して。[Mongodb.com](https://www.mongodb.com/download-center)からダウンロードできます。
+
 ## GameServer
 
 1. MongoDBをインストールして、`localhost:27017`で実行しているのを確認して　（規定な`admin`とパソワードを利用しています）
@@ -45,8 +54,9 @@ Requires Ruby `2.6.1`, `bundler`, and `MongoDB`
 
 ## GameClient
 
-1. Rubyがインストールした、バージョンは`2.6.1`を確認して
+1. Rubyがインストールした事、バージョンは`2.6.1`を確認して
 2. `./GameClient`にディレクトリを変更して
+3. ロカル環境で実行したら、`main.rb`の`Globalconfig.config.url`を`http://0.0.0.0:3000`に変更して
 3. バンドルを実行して
 
 ```bundle exec ruby main.rb```
