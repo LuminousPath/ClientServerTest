@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require 'ruby2d'
 require './lib/Configuration.rb'
 require './lib/Character.rb'
