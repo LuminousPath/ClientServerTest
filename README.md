@@ -2,21 +2,35 @@ Thanks to www.kenney.nl for sprites
 
 # Running
 
+Requires Ruby `2.6.1`, `bundler`, and `MongoDB`
+
+1. Make sure Ruby is installed and running. You can download ruby from [ruby-lang.org](https://www.ruby-lang.org/en/)
+2. Make sure bundler is installed
+
+```gem install bundler```
+
+3. Make sure MongoDB is installed. You can download MongoDB from [Mongodb.com](https://www.mongodb.com/download-center)
+
 ## GameServer
 
 1. Please make sure to have MongoDB installed and running at `localhost:27017` (uses default `admin` and password)
 2. Run rails execution from `./GameServer`
+
 ```bundle exec rails s```
+
 3. browse to `http://0.0.0.0:3000`
 
 ## GameClient
 
-1. Please make sure Rails is version `2.6.1`
+1. Please make sure Ruby is installed and version `2.6.1`
 2. Change directory to `./GameClient`
-3. Run bundle execution
+3. If running locally, change main.rb `GlobalConfig.config.url` to `http://0.0.0.0:3000`
+4. Run bundle execution
+
 ```bundle exec ruby main.rb```
-4. Play!
-5. Check your scores at `http://0.0.0.0:3000`
+
+5. Play!
+6. Check your scores at `http://0.0.0.0:3000`
 
 # やり方
 
@@ -31,7 +45,7 @@ Thanks to www.kenney.nl for sprites
 
 ## GameClient
 
-1. Railsのバージョンは`2.6.1`を確認して
+1. Rubyがインストールした、バージョンは`2.6.1`を確認して
 2. `./GameClient`にディレクトリを変更して
 3. バンドルを実行して
 
