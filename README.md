@@ -32,7 +32,7 @@ Requires `ruby 2.6.1`, `bundler`, and `MongoDB`
 5. Play!
 6. Check your scores at `http://0.0.0.0:3000`
 
-# やり方
+# 実行方法
 
 `ruby 2.6.1`, `bundler`, `MongoDB`は必要
 
